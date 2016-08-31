@@ -1,0 +1,22 @@
+[package]
+authors = ["Andre Bogus <bogusandre@gmail.com>"]
+description = "Rust wrapper for Matthew Endsley's bsdiff implementation"
+keywords = ["compression"]
+license = "BSD2"
+name = "bsdiff"
+readme = "README.md"
+repository = "https://github.com/llogiq/bsdiff"
+version = "0.1.0"
+
+[dependencies]
+brotli = { version = "1.0.6", features = ["unsafe"] }
+bzip2 = "0.3.0"
+error-chain = "0.5.0"
+
+[lib]
+name = "bsdiff"
+
+[[bin]]
+name = "rspatch"
+path = "src/rspatch.rs"
+test = false
